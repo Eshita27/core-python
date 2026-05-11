@@ -31,3 +31,7 @@ def test_multiply():
 
 def test_multiply_by_zero():
         multiply(9,0)
+
+def test_subtract_using_fixture(sample_numbers):
+    a,b = sample_numbers
+    assert subtract(a,b) == 5
