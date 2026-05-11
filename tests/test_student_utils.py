@@ -1,15 +1,18 @@
+import pytest
 from src.basics.student_utils import get_student_grade
 
-def test_get_student_grade():
+@pytest.mark.parametrize("name, expected",
+    [
+        ( "Eshita", "A"),
+        ( "Rahul", "B"),
+        ("Priya", "A+")
+    ])
+
+def test_get_student_grade(name, expected):
     students = {
         "Eshita":"A",
         "Rahul":"B",
         "Priya":"A+"
     }
 
-    result = get_student_grade(students, "Eshita")
-    assert result == "A"
-    result = get_student_grade(students, "Rahul")
-    assert result == "B"
-    result = get_student_grade(students, "Priya")
-    assert result == "A+"
+    assert get_student_grade(students,name) == expected
