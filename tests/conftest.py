@@ -14,3 +14,9 @@ def students():
         "Rahul":"B",
         "Priya":"A+"
     }
+
+@pytest.fixture(scope="function")
+def demo_fixture():
+    print("\n Creating fixture")
+    yield "fixture_data"
+    print("\n Destroying fixture")
