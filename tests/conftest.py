@@ -26,3 +26,16 @@ def auto_logger():
     print("\n Before every test")
     yield
     print("\n After every test")
+
+@pytest.fixture()
+def db_connection():
+    print("\n Connecting to database")
+    yield "DB Connection"
+    print("\n Closing database connection")
+
+@pytest.fixture()
+def user(db_connection):
+    print("\n Creating user")
+    return {
+        "username": "Eshita"
+    }
