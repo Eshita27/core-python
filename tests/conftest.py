@@ -15,8 +15,14 @@ def students():
         "Priya":"A+"
     }
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="module")
 def demo_fixture():
     print("\n Creating fixture")
     yield "fixture_data"
     print("\n Destroying fixture")
+
+@pytest.fixture(autouse=True)
+def auto_logger():
+    print("\n Before every test")
+    yield
+    print("\n After every test")
