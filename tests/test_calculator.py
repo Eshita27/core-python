@@ -1,13 +1,10 @@
 import pytest
 from src.basics.calculator import add,subtract,multiply,divide
+from tests.test_data.calculator_data import addition_test_data
 
 @pytest.mark.parametrize(
     "a,b,expected",
-    [
-        (2, 3, 5),
-        (-2, -3, -5),
-        (10, 0, 10)
-    ]
+    addition_test_data
 )
 
 @pytest.mark.smoke
