@@ -1,4 +1,19 @@
-.venv/
-.idea/
+# Python cache
 __pycache__/
+*.pyc
+
+# Pytest
 .pytest_cache/
+
+# Virtual environment
+.venv/
+
+# Reports
+reports/
+assets/
+
+# IDE
+.idea/
+
+# OS files
+.DS_Store
