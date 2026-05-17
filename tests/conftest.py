@@ -39,3 +39,11 @@ def user(db_connection):
     return {
         "username": "Eshita"
     }
+
+@pytest.fixture(scope="session")
+def app_config():
+    print("\n Loading app config")
+    return {
+        "env":"QA",
+        "browser":"Chrome"
+    }
