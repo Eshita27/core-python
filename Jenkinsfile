@@ -31,6 +31,7 @@ pipeline {
                 reportFiles: 'report.html',
                 reportName: 'Pytest Report'
             ])
+            archiveArtifacts artifacts: 'reports/*', fingerprint: true
         }
     }
 }
