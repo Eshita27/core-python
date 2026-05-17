@@ -14,3 +14,6 @@ This repository contains my Python learning journey including:
 - pytest
 - PyCharm
 - Git & GitHub
+
+## PR Template Validation
+Testing GitHub PR template auto-population.
