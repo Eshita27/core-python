@@ -16,3 +16,10 @@ Brief description of the changes made.
 ### Local Command Used
 ```bash
 pytest -v
+```
+
+### Local Result
+Example:
+```text
+17 passed in 0.09s
+```
