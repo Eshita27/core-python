@@ -47,3 +47,7 @@ def app_config():
         "env":"QA",
         "browser":"Chrome"
     }
+
+@pytest.fixture(params=["chrome","firefox","safari","edge"])
+def browser(request):
+    return request.param
