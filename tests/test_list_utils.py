@@ -1,4 +1,4 @@
-from src.basics.list_utils import get_even_numbers
+from src.basics.collections.list_utils import get_even_numbers
 
 def test_get_even_numbers():
     numbers = [1, 2, 3, 4, 5, 6]

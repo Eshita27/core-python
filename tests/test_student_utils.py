@@ -1,5 +1,5 @@
 import pytest
-from src.basics.student_utils import get_student_grade
+from src.basics.python_fundamentals.student_utils import get_student_grade
 from tests.test_data.student_data import student_grade_data
 
 @pytest.mark.parametrize("name, expected",

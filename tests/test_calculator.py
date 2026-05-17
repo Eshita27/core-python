@@ -1,5 +1,5 @@
 import pytest
-from src.basics.calculator import add,subtract,multiply,divide
+from src.basics.python_fundamentals.calculator import add,subtract,multiply,divide
 from tests.test_data.calculator_data import addition_test_data
 
 @pytest.mark.parametrize(
