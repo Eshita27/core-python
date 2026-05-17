@@ -19,18 +19,18 @@ pipeline {
                 bat 'python -m pytest -v --html=reports/report.html --self-contained-html'
             }
         }
+    }
 
-        stage('Publish Report') {
-            steps {
-                publishHTML([
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'reports',
-                    reportFiles: 'report.html',
-                    reportName: 'Pytest Report'
-                ])
-            }
+     post {
+        always {
+            publishHTML([
+                allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'reports',
+                reportFiles: 'report.html',
+                reportName: 'Pytest Report'
+            ])
         }
     }
 }
