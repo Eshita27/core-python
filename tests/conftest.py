@@ -48,6 +48,6 @@ def app_config():
         "browser":"Chrome"
     }
 
-@pytest.fixture(params=["chrome","firefox","safari","edge"])
+@pytest.fixture(params=["Chrome","FIREFOX","sAFARI","edge"])
 def browser(request):
     return request.param
